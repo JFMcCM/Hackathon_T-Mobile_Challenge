@@ -6,7 +6,11 @@ export default function App() {
   const [dark, setDark] = useState(false);
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${dark ? "bg-black text-white" : "bg-white text-black"}`}>
+    <div
+      className={`min-h-screen transition-colors duration-300 ${
+        dark ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       {/* Header */}
       <header className="relative h-20 md:h-24 bg-gradient-to-r from-[#E20074] via-[#ff0080] to-[#E20074] shadow-xl flex items-center justify-center">
         <img src={tmobileLogo} alt="T-Mobile" className="h-[700%] w-auto select-none pointer-events-none drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]" />
@@ -22,22 +26,12 @@ export default function App() {
           <span className="block mx-auto h-full w-2/3 rounded-full bg-[#ff1aa6] blur-2xl opacity-40 animate-pulse" />
         </div>
       </header>
-
-      {/* Content */}
-      <main className="flex flex-col items-center justify-center gap-6 h-[calc(100vh-5rem)] md:h-[calc(100vh-6rem)]">
-        <h1 className="text-2xl font-semibold">{dark ? "Dark mode" : "Light mode"}</h1>
-
-        {/* Survey link */}
-        <p className="text-lg">
-          Link:{" "}
-          <a
-            href="https://forms.gle/n9nrmdFvrW6xLpeGA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#E20074] font-semibold underline hover:text-[#B1005C] transition">
-            Survey Link
-          </a>
-        </p>
+      {/* Content area */}
+      <main className="flex flex-col items-center justify-start pt-10">
+        {/* Keep your existing example content */}
+        <h1 className="text-2xl font-semibold mt-10">
+          {dark ? "Dark mode" : "Light mode"}
+        </h1>
       </main>
     </div>
   );
