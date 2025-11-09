@@ -1,6 +1,5 @@
 import { useState } from "react";
 import tmobileLogo from "./assets/tmobile-logo-white.png"; // white transparent logo
-import AverageRatings from "./components/AverageRatings";
 
 export default function App() {
   const [dark, setDark] = useState(false);
@@ -40,9 +39,6 @@ export default function App() {
       </header>
       {/* Content area */}
       <main className="flex flex-col items-center justify-start pt-10">
-        {/* ✅ Add the AverageRatings component here */}
-        <AverageRatings />
-
         {/* Keep your existing example content */}
         <h1 className="text-2xl font-semibold mt-10">
           {dark ? "Dark mode" : "Light mode"}
